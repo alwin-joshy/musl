@@ -55,7 +55,7 @@ CFLAGS += ${NK_CFLAGS}
 export CC CROSS_COMPILE CFLAGS
 
 configure_line := --srcdir=${SOURCE_DIR} --prefix=${STAGE_DIR} ${ENABLE_DEBUG} \
-        --target=aarch64 --enable-warnings --disable-shared --enable-static
+        --target=aarch64 --enable-warnings --disable-shared --enable-static --with-malloc=oldmalloc
 
 build_muslc:
     # If the configure line changed and we've done a build (i.e. we have a makefile) then we should
